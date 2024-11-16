@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Yoan Boyer & Alexandre Chassefeyre">
+	<meta name="description" content="page présentant la réalité virtuelle">
+
+	<title>Forum</title>
+	<link href="../css/normalize.css" rel="stylesheet">
+	<link href="../css/index.css" rel="stylesheet">
+	<link href="../css/formulaire.css" rel="stylesheet">
+	<link href="../css/chat.css" rel="stylesheet">
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+	<nav id="menu" class="topnav">
+		<div id="menu-burger"><img src="images/burger.png" alt="Menu burger"></div>
+		<a id="logo" href="../index.html"><img src="images/logo.png" alt="Logo du site"></a>
+		<a id="login" href="formulaire.html"><img src="images/whiteLogin.png" alt="Bouton de connexion"
+				title="Connexion"></a>
+		<ul>
+			<li><a href="../index.html">Page d'accueil</a></li>
+			<li><a href="ia.html">Intelligence artificielle</a></li>
+			<li><a href="vr.html">Réalité virtuelle</a></li>
+			<li><a href="crypto.html">Cryptographie</a></li>
+		</ul>
+	</nav>
+	<header>
+		<h1>Forum</h1>
+	</header>
+	<noscript>JavaScript est désactivé, certaines fonctionnalités risquent de ne pas fonctionner</noscript>
+	<div id="error"></div>
+	<textarea id="input" class="message-input" rows="4" placeholder="Écrivez votre message ici"></textarea>
+	<button id="sendButton">Envoyer</button>
+
+	<table>
+		<tbody>
+
+		</tbody>
+	</table>
+	<script src="../js/chat.js"></script>
+	<script src="../js/menu.js"></script>
+</body>
+
+</html>

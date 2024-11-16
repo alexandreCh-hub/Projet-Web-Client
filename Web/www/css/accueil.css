@@ -1,0 +1,197 @@
+.container-card {
+  line-height: 25px;
+}
+
+.container-card p {
+  text-indent: 0%;
+}
+
+.presentation p,
+.presentation h2 {
+  margin-left: 3%;
+  line-height: 1.7em;
+}
+
+.presentation h2 {
+  font-size: 3em;
+  line-height: 1em;
+}
+
+.container-card h2,
+.container-card h3 {
+  text-transform: none;
+  font-size: 1.5em;
+}
+
+/* Introduction sous forme de citation */
+
+blockquote {
+  position: relative;
+  background: #d6d6d6;
+  padding: 40px 70px;
+  border-radius: 30px;
+}
+
+blockquote p {
+  margin: 0;
+}
+
+blockquote:before {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  content: "\f10d";
+  font-family: 'Fontawesome';
+  font-size: 40px;
+  color: #999;
+}
+
+blockquote:after {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  content: "\f10e";
+  font-family: 'Fontawesome';
+  font-size: 40px;
+  color: #999;
+}
+
+/* informations sur le site */
+
+.infos h2 {
+  text-align: center;
+  font-size: 2em;
+}
+
+.infos p {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.infos a {
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(46, 46, 185);
+}
+
+.infos {
+  position: relative;
+  background: #d6d6d6;
+  margin: 2% 20%;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+/* Footer */
+
+.footer {
+  /*width: 100%;*/
+  background-color: #222;
+  color: #fff;
+  margin-top: 2%;
+  padding: 1% 0%;
+}
+
+/* CSS pour les cartes de la page d'accueil */
+
+body {
+  box-sizing: border-box;
+}
+
+.container-card {
+  width: 90%;
+  margin: 50px auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-flow: wrap;
+}
+
+.card {
+  width: 20%;
+  background: #fff;
+  border: 1px solid #ccc;
+  margin-bottom: 50px;
+  margin-left: 2%;
+  margin-right: 2%;
+  transition: 0.3s;
+}
+
+.card-title {
+  font-size: 25px;
+  text-align: center;
+  padding: 50px 10px;
+  background: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+  color: #fff;
+  line-height: 1.5em;
+
+}
+
+.card-content {
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 1em;
+}
+
+.card-content .linked {
+  display: block;
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+  margin-top: 30px;
+  text-decoration: none;
+  padding: 10px 5px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width: 1450px) {
+  .card {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 722px) {
+  .container-card {
+    width: 100%;
+  }
+
+  .title {
+    padding: 20px;
+    font-size: 20px;
+  }
+
+  .card-title {
+    font-size: 1.5em;
+  }
+
+  .card {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+  blockquote:before,
+  blockquote:after {
+    display: none;
+    top: 0px;
+    left: 0px
+  }
+
+  blockquote {
+    padding: 10px;
+  }
+}

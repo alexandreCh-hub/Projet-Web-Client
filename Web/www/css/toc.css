@@ -1,0 +1,67 @@
+/* CSS pour la table des matières */
+
+#toc {
+  position: -webkit-sticky;
+  position: sticky;
+  list-style: none;
+  text-align: center;
+  height: 10%;
+  margin: 1%;
+  margin-right: 3%;
+  top: 10%
+}
+
+#toc ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+#toc li {
+  background-color: #D8D8D8;
+  background-image: linear-gradient(to right top, #0d282a, #0a333b, #0a3e4d, #134861, #255274);
+  border-radius: 6px;
+  margin-bottom: 2px;
+  box-shadow: 3px 3px 3px #999;
+  border: solid 1px #333A40
+}
+
+#toc li li {
+  max-height: 0;
+  overflow: hidden;
+  transition: all .5s;
+  border-radius: 0;
+  /*background: #444;*/
+  background-image: linear-gradient(to right top, #2d66b9, #1c5da2, #12538b, #104974, #143e5e);
+  box-shadow: none;
+  border: none;
+  margin: 0
+}
+
+#toc a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 0;
+  font-family: verdana;
+  font-size: 1.2em
+}
+
+#toc ul li a,
+#menu-accordeon li:hover li a {
+  font-size: 1em
+}
+
+#toc li li:hover {
+  background: #999;
+}
+
+#toc ul li:last-child {
+  border-radius: 0 0 6px 6px;
+  border: none;
+}
+
+#toc li:hover li {
+  max-height: 15em;
+}

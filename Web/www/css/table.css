@@ -1,0 +1,58 @@
+/* CSS pour le tableau */
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid black;
+  background-color: #D6D6D6;
+}
+
+th,
+td {
+  padding: 20px;
+}
+
+tr,
+td,
+th {
+  border: 2px solid black;
+}
+
+thead {
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+thead th {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #D6D6D6;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #898989;
+}
+
+@media (max-width: 992px) {
+  table thead {
+    display: none;
+  }
+
+  table tr {
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  table td {
+    display: block;
+    text-align: left;
+  }
+
+  tr,
+  td {
+    border: none;
+  }
+}

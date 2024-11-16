@@ -1,0 +1,93 @@
+h1 {
+  margin-top: 6%;
+  text-align: center;
+  font-size: 3em;
+}
+
+:focus {
+  outline: 1px solid blue;
+  background: #eaeaea;
+}
+
+em,
+noscript {
+  font-weight: bold;
+  font-style: normal;
+  color: #f00;
+}
+
+form a {
+  color: #383838;
+}
+
+form p {
+  text-align: center;
+}
+
+form div+div {
+  margin-top: 1em;
+}
+
+label {
+  /* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
+  display: inline-block;
+  width: 60%;
+  margin-top: 5%;
+  text-align: left;
+}
+
+form {
+  /*width: 50%;*/
+  max-width: 650px;
+  margin: 0 auto;
+  margin-bottom: 5%;
+  padding: 20px;
+  border: 2px solid #3f3d3d;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0.5);
+}
+
+input[type="text"],
+#userpwd {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#submit {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: default;
+}
+
+#answer {
+  display: None;
+  text-align: center;
+  margin: 5% 15% 0 15%;
+  padding: 2%;
+  border: 2px solid #3f3d3d;
+  border-radius: 10px;
+}
+
+@media screen and (max-width:1024px) {
+  h1 {
+    margin-top: 10%;
+  }
+}
+
+@media screen and (max-width:600px) {
+  h1 {
+    font-size: 2em;
+    margin-top: 15%;
+  }
+
+  .container {
+    font-size: 0.8em;
+  }
+}

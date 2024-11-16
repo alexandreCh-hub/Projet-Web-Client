@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Yoan Boyer & Alexandre Chassefeyre">
+	<meta name="description" content="page de formulaire">
+	<title>Inscription</title>
+	<link href="../css/normalize.css" rel="stylesheet">
+	<link href="../css/index.css" rel="stylesheet">
+	<link href="../css/formulaire.css" rel="stylesheet">
+</head>
+
+<body>
+	<nav id="menu" class="topnav">
+		<div id="menu-burger"><img src="images/burger.png" alt="Menu burger"></div>
+		<a id="logo" href="../index.html"><img src="images/logo.png" alt="Logo du site"></a>
+		<a id="login" href="formulaire.html"><img src="images/whiteLogin.png" alt="Bouton de connexion"
+				title="Connexion"></a>
+		<ul>
+			<li><a href="../index.html">Page d'accueil</a></li>
+			<li><a href="ia.html">Intelligence artificielle</a></li>
+			<li><a href="vr.html">Réalité virtuelle</a></li>
+			<li><a href="crypto.html">Cryptographie</a></li>
+		</ul>
+	</nav>
+	<header>
+		<h1>Inscription</h1>
+	</header>
+
+	<div class="container">
+
+		<noscript>JavaScript est désactivé, certaines fonctionnalités risquent de ne pas fonctionner</noscript>
+		<form>
+			<p>Les champs marqués par <em>*</em> sont <em>obligatoires</em></p>
+			<label>Nom <em>*</em> <input type="text" id="lastname" required="" autofocus=""></label>
+			<label>Prenom <em>*</em> <input type="text" id="firstname" required=""></label>
+			<label>Date de naissance <input type="text" id="birthdate" placeholder="jj/mm/aaaa"></label>
+			<label>Nom d'utilisateur <em>*</em> <input type="text" id="username" required=""></label>
+			<label>Mot de passe <em>*</em> <input type="password" id="userpwd" required=""></label>
+			<label>Adresse mail <em>*</em> <input type="text" id="useremail" required=""></label>
+			<input type="submit" id="submit" value="Envoyer" disabled>
+			<a href="connexion.html"><I>Deja inscrit ?</I></a>
+		</form>
+
+		<footer class="footer">
+			<div class="contenu">
+				<h3>A propos</h3>
+				<p>Ce site a été réalisé dans le cadre du cours de technologie WEB client de licence informatique de
+					l'UCA.
+					Le but étant d'utiliser les langages de programmation HTML,
+					CSS et JavaScript, nous n'avons pas écrit nous même les différents articles qui composent le site.
+					Le contenu des articles est donc une copie de sites déjà existants tel que wikipedia ou les sites
+					qui
+					sont référencés dans les liens utiles de cette page. </p>
+
+				<h3>Nous contacter</h3>
+				<h4>Mail étudiant:</h4>
+				<p>Yoan.BOYER@etu.uca.fr <br>
+					Alexandre.CHASSEFEYRE@etu.uca.fr</p>
+			</div>
+		</footer>
+	</div>
+	<script src="../js/formulaire.js"></script>
+	<script src="../js/menu.js"></script>
+</body>
+
+</html>

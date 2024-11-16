@@ -1,0 +1,108 @@
+/* CSS pour le menu principal */
+
+#menu {
+  background-color: #222;
+  overflow: hidden;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  margin-bottom: 0%;
+}
+
+#menu ul {
+  margin: auto 18% auto 18%;
+  list-style-type: none;
+}
+
+#menu ul li {
+  float: left;
+}
+
+#menu ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1vw;
+  font-family: 'Poppins', sans-serif;
+  padding: 30px 30px;
+}
+
+#menu ul li a:hover {
+  background-color: #413b3b;
+}
+
+#menu ul li a.active {
+  background-color: rgb(83, 83, 206);
+}
+
+#menu img {
+  width: 50px;
+  height: 50px;
+}
+
+#logo,
+#login {
+  float: right;
+  margin: 1% 1% 0% 1%;
+}
+
+#menu-burger {
+  display: none;
+}
+
+
+@media screen and (max-width:1024px) {
+  #menu ul {
+    margin: 0%;
+    padding-left: 0%;
+  }
+
+  #menu ul li a {
+    padding: 25px 25px;
+    font-size: 1.3vw;
+  }
+
+  #menu img {
+    width: 30px;
+    height: 30px;
+  }
+
+  #logo,
+  #login {
+    float: right;
+    margin: 2% 1% 0% 1%;
+  }
+}
+
+@media screen and (max-width:600px) {
+  #menu-burger {
+    display: block;
+    float: right;
+    padding: 1% 1.5% 0% 2%;
+  }
+
+  .topnav ul {
+    display: none;
+  }
+
+  .responsive ul {
+    display: block;
+  }
+
+
+  #menu ul li {
+    width: 100%;
+  }
+
+  #menu ul li a {
+    font-size: 0.8em;
+  }
+
+  #login,
+  #logo {
+    float: left;
+    margin: 1% 1% 0% 1%;
+  }
+}

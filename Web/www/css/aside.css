@@ -1,0 +1,50 @@
+aside {
+    position: -webkit-sticky;
+    /* pour Safari */
+    position: sticky;
+    top: 10%;
+    background-color: #efefef;
+    height: 10%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin: 1%;
+    margin-left: 3%;
+}
+
+aside h3 {
+    margin: 0 auto;
+    text-align: center;
+    background-color: gray;
+    color: #fff;
+    padding: 4%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+aside ul {
+    padding-left: 0px;
+    margin: 0px auto;
+}
+
+
+aside ul li,
+aside ul li a {
+    display: block;
+}
+
+aside ul li a:link {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.1em;
+    padding: 10px 40px;
+    transition: all 0.5s;
+}
+
+aside ul li a:visited {
+    color: #4b37a1;
+}
+
+aside ul li a:hover {
+    text-indent: 15px;
+    background-color: #cfcfcf;
+}

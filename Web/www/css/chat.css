@@ -1,0 +1,61 @@
+.message-input {
+    font-size: 16px;
+    border: 1px solid #000;
+    margin-left: 20%;
+    margin-right: 20%;
+    width: 60%;
+}
+
+#sendButton {
+    margin-left: 48%;
+    cursor: pointer;
+}
+
+#error {
+    color: #f00;
+    text-align: center;
+    margin: 5% 20% 2% 20%;
+    padding: 1%;
+    border: 2px solid #ff0000;
+    border-radius: 10px;
+    display: none
+}
+
+table {
+    width: 60%;
+    border-collapse: collapse;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+table tr {
+    display: block;
+    margin-bottom: 1%;
+    background-color: #f2f2f2;
+    border-radius: 1em;
+}
+
+img {
+    max-width: 80%;
+    height: auto;
+}
+
+table td {
+    padding: 2%;
+    word-wrap: break-word;
+}
+
+table td:nth-child(2) {
+    vertical-align: top;
+}
+
+table td:first-child {
+    background-color: #e4e4e4;
+    width: 20%;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}

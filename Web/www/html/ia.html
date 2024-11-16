@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Yoan Boyer & Alexandre Chassefeyre">
+    <meta name="description" content="page présentant l'intelligence artificielle">
+
+    <title>Intelligence artificielle</title>
+    <link href="../css/normalize.css" rel="stylesheet">
+    <link href="../css/index.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header de la page -->
+    <header>
+        <!-- Menu de navigation du site-->
+        <nav id="menu" class="topnav">
+            <div id="menu-burger"><img src="images/burger.png" alt="Menu burger"></div>
+            <a id="logo" href="../index.html"><img src="images/logo.png" alt="Logo du site"></a>
+            <a id="login" href="formulaire.html"><img src="images/whiteLogin.png" alt="Bouton de connexion"
+                    title="Connexion"></a>
+            <ul>
+                <li><a href="../index.html">Page d'accueil</a></li>
+                <li><a class="active" href="ia.html">Intelligence artificielle</a></li>
+                <li><a href="vr.html">Réalité virtuelle</a></li>
+                <li><a href="crypto.html">Cryptographie</a></li>
+            </ul>
+        </nav>
+        <div class="container_image">
+            <img id="illustration" src="images/ia2.jpeg" alt="Image d'illustration de l'IA">
+            <div class="text black">
+                <h1>Intelligence <br> Artificielle</h1>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Table des matières -->
+        <nav id="toc">
+            <ul>
+                <li><a href="#Intro">Introduction</a></li>
+                <li><a href="#MachineLearning">Machine Learning</a>
+                    <ul>
+                        <li><a href="#def1">Définition</a></li>
+                        <li><a href="#principes">Principes</a></li>
+                    </ul>
+                </li>
+                <li><a href="#DeepLearning">Deep Learning</a>
+                    <ul>
+                        <li><a href="#def2">Définition</a></li>
+                        <li><a href="#contexte">Contexte</a></li>
+                    </ul>
+                </li>
+                <li><a href="#Traitement">Traitement automatique des langues</a>
+                    <ul>
+                        <li><a href="#def3">Définition</a></li>
+                        <li><a href="#fonctionnement">Fonctionnement</a></li>
+                    </ul>
+                </li>
+                <li><a href="#ComputerVision">Vision par ordinateur</a>
+                    <ul>
+                        <li><a href="#def4">Définition</a></li>
+                        <li><a href="#applications">Applications</a></li>
+                    </ul>
+                </li>
+                <li><a href="#Outils">Outils</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <!-- Header de l'article -->
+            <header>
+                <!-- Ajouter titre article -->
+                <h2>Les technologies de l'IA</h2>
+            </header>
+
+            <!-- Une section par thème de l'article-->
+            <section>
+                <h3 id="Intro">Introduction</h3>
+
+                <p>L'intelligence artificielle (IA) est un processus d'imitation de l'intelligence humaine qui repose
+                    sur la création et l'<strong>application d'algorithmes</strong> exécutés dans un
+                    environnement informatique dynamique. Son but est de permettre à des ordinateurs de penser et d'agir
+                    comme des êtres humains. <br>
+                    Pour y parvenir, trois composants sont nécessaires :</p>
+
+                <ol>
+                    <li>Des systèmes informatiques</li>
+                    <li>Des données avec des systèmes de gestion</li>
+                    <li>Des algorithmes d'IA avancés (code)</li>
+                </ol>
+
+                <p>Pour se rapprocher le plus possible du comportement humain, l'intelligence artificielle a besoin
+                    d'une quantité de données et d'une capacité de traitement élevées. <br>
+                    C'est une <strong>technologie révolutionnaire</strong>, de plus en plus utilisée par les entreprises
+                    de tous les secteurs, en passe de bouleverser toutes nos habitudes. Toutefois, en
+                    réalité, l’IA est un terme qui englobe une large variété de technologies. Découvrez certaines
+                    d’entre elles, à connaître absolument pour se préparer à l’avenir.</p>
+            </section>
+
+            <section>
+                <h3 id="MachineLearning">Machine Learning</h3>
+
+                <h4 id="def1">Définition</h4>
+
+                <p>L'<strong>apprentissage automatique</strong> (en anglais : machine learning), <strong>apprentissage
+                        artificiel</strong> ou <strong>apprentissage statistique</strong> est un champ d'étude de
+                    l'intelligence artificielle
+                    qui se fonde sur des approches mathématiques et statistiques pour donner aux ordinateurs la capacité
+                    d'« apprendre » à partir de données, c'est-à-dire d'améliorer leurs
+                    performances à résoudre des tâches sans être explicitement programmés pour chacune. Plus largement,
+                    il concerne la conception, l'analyse, l'optimisation, le développement
+                    et l'implémentation de telles méthodes. On parle d'apprentissage statistique car l'apprentissage
+                    consiste à créer un modèle dont l'erreur statistique moyenne est la plus
+                    faible possible. <br>
+                    L'apprentissage automatique comporte généralement deux phases. La première consiste à estimer un
+                    modèle à partir de données, appelées observations, qui sont disponibles
+                    et en nombre fini, lors de la phase de conception du système. L'estimation du modèle consiste à
+                    résoudre une tâche pratique, telle que traduire un discours, estimer une
+                    densité de probabilité, reconnaître la présence d'un chat dans une photographie ou participer à la
+                    conduite d'un véhicule autonome. Cette phase dite « d'apprentissage »
+                    ou « d'entraînement » est généralement réalisée préalablement à l'utilisation pratique du modèle. La
+                    seconde phase correspond à la mise en production : le modèle étant
+                    déterminé, de nouvelles données peuvent alors être soumises afin d'obtenir le résultat correspondant
+                    à la tâche souhaitée. En pratique, certains systèmes peuvent poursuivre
+                    leur apprentissage une fois en production, pour peu qu'ils aient un moyen d'obtenir un retour sur la
+                    qualité des résultats produits. <br>
+                    Selon les informations disponibles durant la phase d'apprentissage, l'apprentissage est qualifié de
+                    différentes manières. Si les données sont étiquetées
+                    (c'est-à-dire que la réponse à la tâche est connue pour ces données), il s'agit d'un apprentissage
+                    supervisé. On parle de classification ou de classement si les étiquettes
+                    sont discrètes, ou de régression si elles sont continues. Si le modèle est appris de manière
+                    incrémentale en fonction d'une récompense reçue par le programme pour chacune
+                    des actions entreprises, on parle d'apprentissage par renforcement. Dans le cas le plus général,
+                    sans étiquette, on cherche à déterminer la structure sous-jacente des
+                    données (qui peuvent être une densité de probabilité) et il s'agit alors d'apprentissage non
+                    supervisé. L'apprentissage automatique peut être appliqué à différents types
+                    de données, tels des graphes, des arbres, des courbes, ou plus simplement des vecteurs de
+                    caractéristiques, qui peuvent être des variables qualitatives ou quantitatives
+                    continues ou discrètes. </p>
+
+                <h4 id="principes">Principes</h4>
+
+                <p>L'apprentissage automatique (AA) permet à un système piloté ou assisté par ordinateur comme un
+                    programme, une IA ou un robot, d'adapter ses réponses ou comportements aux
+                    situations rencontrées, en se fondant sur l'analyse de données empiriques passées issues de bases de
+                    données, de capteurs, ou du web. <br>
+                    L'AA permet de surmonter la difficulté qui réside dans le fait que l'ensemble de tous les
+                    comportements possibles compte tenu de toutes les entrées possibles devient
+                    rapidement trop complexe à décrire et programmer de manière classique (on parle d'explosion
+                    combinatoire). On confie donc à des programmes d'AA le soin d'ajuster un modèle
+                    pour simplifier cette complexité et de l'utiliser de manière opérationnelle. Idéalement,
+                    l'apprentissage visera à être non supervisé, c'est-à-dire que les réponses aux
+                    données d’entraînement ne sont pas fournies au modèle. <br>
+                    Ces programmes, selon leur degré de perfectionnement, intègrent éventuellement des capacités de
+                    traitement probabiliste des données, d'analyse de données issues de
+                    capteurs, de reconnaissance (reconnaissance vocale, de forme, d'écriture…), de fouille de données,
+                    d'informatique théorique… </p>
+
+                <figure>
+                    <img src="images/machineLearning.jpg" alt="illustration du machine-learning">
+                    <figcaption>Lien entre le cerveau humain et les réseaux de neurones</figcaption>
+                </figure>
+            </section>
+
+            <section>
+                <h3 id="DeepLearning">Deep Learning</h3>
+
+                <h4 id="def2">Définition</h4>
+
+                <p>L'<strong>apprentissage profond</strong>, ou <strong>apprentissage en profondeur</strong> (en anglais
+                    : deep learning, deep structured learning, hierarchical learning) est un ensemble de méthodes
+                    d'apprentissage automatique tentant de modéliser avec un haut niveau d’abstraction des données grâce
+                    à des architectures articulées de différentes transformations non
+                    linéaires. Ces techniques ont permis des progrès importants et rapides dans les domaines de
+                    l'analyse du signal sonore ou visuel et notamment de la reconnaissance faciale,
+                    de la reconnaissance vocale, de la vision par ordinateur, du traitement automatisé du langage. Dans
+                    les années 2000, ces progrès ont suscité des investissements privés,
+                    universitaires et publics importants, notamment de la part des GAFAM (Google, Apple, Facebook,
+                    Amazon, Microsoft). </p>
+
+                <h4 id="contexte">Contexte</h4>
+
+                <p>L’apprentissage profond fait partie d’une famille de méthodes d'apprentissage automatique fondées sur
+                    l’apprentissage de modèles de données. Une observation (une image, par
+                    exemple) peut être représentée de différentes façons par un vecteur, une matrice ou un tenseur de
+                    données décrivant la scène observée, notamment en fonction de :</p>
+
+                <ul>
+                    <li>L’intensité des pixels dont elle est constituée ;</li>
+                    <li>Ses différentes arêtes ;</li>
+                    <li>Ses différentes régions, aux formes particulières.</li>
+                </ul>
+
+                <p>Certaines représentations et une bonne capacité d'analyse automatique des différenciations rendent la
+                    tâche d’apprentissage plus efficace.
+                    Une des finalités des techniques de l'apprentissage profond consiste à supprimer certaines tâches
+                    simples tels que des calculs mathématiques, encore relativement laborieux,
+                    par des modèles algorithmiques d’apprentissage supervisé et non supervisé (c’est-à-dire ne prenant
+                    pas en compte pas des connaissances spécifiques du domaine étudié) ou encore
+                    par des techniques d’extraction hiérarchique des caractéristiques. <br>
+                    Les recherches dans ce domaine s’efforcent de construire de meilleures représentations du réel et de
+                    créer des modèles capables d’apprendre ces représentations à partir de
+                    données brutes et non-travaillées en amont par l'homme, et ce à grande échelle. Certaines de ces
+                    représentations s’inspirent des dernières avancées en neuroscience. Il s'agit,
+                    donc pour résumer d'interprétations du traitement de l'information et des modèles de communication
+                    du système nerveux, à l'image de la façon dont le système nerveux établit
+                    des connexions en fonction des messages reçus, de la réponse neuronale et du poids des connexions
+                    entre les neurones du cerveau. <br>
+                    Les différentes architectures d’apprentissage profond telles que les réseaux de neurones profonds,
+                    les réseaux neuronaux convolutifs « convolutional deep neural networks »,
+                    et les réseaux de croyance profonde (en) ont plusieurs champs d’application :</p>
+
+                <ul>
+                    <li>La vision par ordinateur (reconnaissance de formes) ;</li>
+                    <li>La reconnaissance automatique de la parole ;</li>
+                    <li>Le traitement automatique du langage naturel ;</li>
+                    <li>La reconnaissance audio et la bio-informatique.</li>
+                </ul>
+
+                <p>ces deux derniers domaines, notamment, elles ont obtenu des résultats très prometteurs. </p>
+            </section>
+
+            <section>
+                <h3 id="Traitement">Traitement automatique des langues</h3>
+
+                <h4 id="def3">Définition</h4>
+
+                <p>Le <strong>traitement automatique de la langue naturelle</strong> (TALN)1 ou <strong>traitement
+                        automatique des langues</strong>(TAL), plus couramment appelé NLP (de l'anglais : natural
+                    langage processing)
+                    est un domaine multidisciplinaire impliquant la linguistique, l'informatique et l'intelligence
+                    artificielle, qui vise à créer des outils de traitement de la langue
+                    naturelle pour diverses applications. Il ne doit pas être confondu avec la linguistique
+                    informatique, qui vise à comprendre les langues au moyen d'outils informatiques. <br>
+                    Le TALN est sorti des laboratoires de recherche pour être progressivement mis en œuvre dans des
+                    applications informatiques nécessitant l'intégration du langage humain à la
+                    machine. Aussi le TALN est-il parfois appelé ingénierie linguistique. En France, le traitement
+                    automatique de la langue naturelle a sa revue, Traitement automatique des
+                    langues, publiée par l’Association pour le traitement automatique des langues (ATALA). </p>
+
+                <h4 id="fonctionnement">Fonctionnement</h4>
+
+                <p>Le langage humain est un système complexe. Selon les scientifiques, il s’agit d’un système de
+                    signalisation discret, symbolique et catégorique. En d’autres termes, il
+                    comprend des symboles qui permettent aux humains de transmettre le même sens de différentes
+                    manières. En outre, il existe une infinité de possibilités pour agencer les mots
+                    dans une phrase. Un mot peut avoir plusieurs significations en fonction du contexte dans lequel il
+                    est placé. <br>
+                    D’autre part, le langage comporte de nombreuses règles et subtilités difficiles à comprendre pour
+                    les ordinateurs. Par exemple, la notion de pluralité ou de sarcasme est
+                    difficile à percevoir pour une machine. Cela signifie que pour comprendre le langage humain, le NLP
+                    doit comprendre les mots et les différents concepts. <br>
+                    Entre autres, le NLP traite des données linguistiques du monde réel pour leur donner un sens de
+                    manière à ce qu’un ordinateur puisse les comprendre. Pour collecter ces
+                    données, les machines utilisent des capteurs (qui correspondent à nos yeux et à nos oreilles) pour
+                    lire et entendre. <br>
+                    La compréhension du langage naturel peut se faire par une analyse syntaxique ou une analyse
+                    sémantique. L’analyse syntaxique correspond à l’analyse du langage en fonction
+                    des règles grammaticales. Elle s’applique donc à un groupe de mots et non aux mots individuels.
+                    Quant à l’analyse sémantique, c’est le processus qui permet de comprendre
+                    le sens ou à la logique d’un énoncé. Elle consiste donc à comprendre le sens et à interpréter les
+                    mots, les signes et la structure des phrases. </p>
+            </section>
+
+            <section>
+                <h3 id="ComputerVision">Vision par ordinateur (computer vision)</h3>
+
+                <h4 id="def4">Définition</h4>
+
+                <p>La <strong>vision par ordinateur</strong> est un domaine scientifique et une branche de
+                    l’intelligence artificielle qui traite de la façon dont les ordinateurs peuvent acquérir une
+                    compréhension de haut niveau à partir d'images ou de vidéos numériques. Du point de vue de
+                    l'ingénierie, il cherche à comprendre et à automatiser les tâches que le système
+                    visuel humain peut effectuer. <br>
+                    Vue d'artiste d'un Rover automatique explorant la surface de Mars. Il est équipé sur son sommet de
+                    deux caméras vidéo lui conférant une vision stéréoscopique.
+                    Les tâches de vision par ordinateur comprennent des procédés pour acquérir, traiter, analyser et «
+                    comprendre » des images numériques, et extraire des données afin de
+                    produire des informations numériques ou symboliques, par ex. sous forme de décisions. <br>
+                    Dans ce contexte, la compréhension signifie la transformation d'images visuelles (l'entrée de la
+                    rétine) en descriptions du monde qui ont un sens pour les processus de
+                    pensée et peuvent susciter une action appropriée. Cette compréhension de l'image peut être vue comme
+                    l’acquisition d'informations symboliques à partir de données d'image,
+                    par l'emploi de modèles s'apuyant sur la géométrie, la physique, les statistiques et la théorie de
+                    l'apprentissage. <br>
+                    La discipline scientifique de la vision par ordinateur s'intéresse à la théorie des systèmes
+                    artificiels qui extraient des informations à partir d'images. Les données
+                    d'image peuvent prendre de nombreuses formes, telles que des séquences vidéo, des vues de plusieurs
+                    caméras, des données multidimensionnelles à partir d'un scanner 3D ou
+                    d'un appareil de numérisation médical. La discipline technologique de la vision par ordinateur
+                    cherche à appliquer les modèles théoriques développés à la construction de
+                    systèmes de vision par ordinateur. <br>
+                    Les sous-domaines de la vision par ordinateur comprennent la détection d'événements, le suivi vidéo,
+                    la reconnaissance d'objets, l'apprentissage, l'indexation,
+                    l'estimation de mouvement, la modélisation de scènes 3D et la restauration d'image </p>
+
+                <h4 id="applications">Applications</h4>
+
+                <p>Les applications vont des tâches telles que les systèmes de vision industriels qui, par exemple,
+                    inspectent les bouteilles qui défilent sur une ligne de production, à la
+                    recherche sur l'intelligence artificielle et les ordinateurs ou robots capables de comprendre le
+                    monde qui les entoure. Dans de nombreuses applications de vision par
+                    ordinateur, les ordinateurs sont préprogrammés pour résoudre une tâche particulière, mais les
+                    méthodes basées sur l'apprentissage sont de plus en plus courantes.<br>
+                    Des exemples d'applications de la vision par ordinateur comprennent des systèmes pour :</p>
+
+                <ul>
+                    <li>Inspection automatique, par exemple dans les applications de fabrication;</li>
+                    <li>Aider les humains dans les tâches d'identification, par exemple, un système d'identification des
+                        espèces;</li>
+                    <li>Contrôle des processus, par exemple, un robot industriel;</li>
+                    <li>Détection d'événements, par exemple pour la surveillance visuelle ou le comptage de personnes,
+                        par exemple dans l'industrie de la restauration; - Interaction,
+                        par exemple en tant qu'entrée d'un dispositif d'interaction ordinateur-homme; </li>
+                    <li>Modélisation d'objets ou d'environnements, par exemple, analyse d'images médicales ou
+                        modélisation topographique;</li>
+                    <li>Navigation, par exemple par un véhicule autonome ou un robot mobile;</li>
+                    <li>Organisation des informations, par exemple pour l'indexation de bases de données d'images et de
+                        séquences d'images.</li>
+                </ul>
+
+                <p>L'apprentissage des formes 3D a été une tâche difficile en vision par ordinateur. Les progrès récents
+                    de l'apprentissage en profondeur ont permis aux chercheurs de créer
+                    des modèles capables de générer et de reconstruire des formes 3D à partir de cartes de profondeur ou
+                    de silhouettes à une ou plusieurs vues de manière transparente et
+                    efficace. </p>
+
+                <figure>
+                    <img src="images/computerVision.png" alt="illustration détection par un véhicule">
+                    <figcaption>Détection des piétons et des voitures</figcaption>
+                </figure>
+            </section>
+
+            <section>
+                <h3 id="Outils">Outils</h3>
+
+                <p>Il existe plusieurs outils qui sont particulièrement utilisés dans la création d'intelligence
+                    artificielle comme par exemple <strong>TensorFlow</strong> ou <strong>Jupyter Notebook</strong>.
+                    <br>
+                    TensorFlow est une plateforme open source pour le Machine Learning, initialement créée par Google en
+                    vue d’un usage interne. Elle fonctionne avec un large écosystème
+                    d’outils, bibliothèques et ressources communes pour aider les entreprises à créer et à déployer plus
+                    facilement et rapidement les applications reposant sur le Machine
+                    Learning. <br>
+                    Pour ce faire, elle prend en charge des APIs de haut niveau telles que Keras. Il s’agit d’une API de
+                    réseaux de neurones de haut niveau, écrite en Python et pouvant
+                    être exécuté par déçus Tensorflow, Microsoft CNTK ou encore Theano.<br>
+                    Le Project Jupyter tire son nom des trois langages de programmation qu’il prend en charge : Julia,
+                    Python et R. Il s’agit d’un environnement interactif pour les Data
+                    Scientists et les développeurs de Machine Learning basé sur navigateur web. <br>
+                    Il permet de créer ou de partager des documents contenant du code live, des équations, des
+                    visualisation et du texte. Le Jupyter Notebook peut être utilisé pour le Data
+                    Cleansing ou la transformation de données, la simulation numérique, la modélisation statistique, la
+                    visualisation de données, ou encore le Machine Learning et bien plus
+                    encore.
+                </p>
+            </section>
+        </article>
+
+        <aside>
+            <h3>Liens utiles</h3>
+            <ul>
+                <li><a href="https://ia-data-analytics.fr/machine-learning/">En
+                        savoir plus sur le machine learning</a></li>
+                <li><a href="https://www.lebigdata.fr/deep-learning-definition">En savoir plus sur le deep learning</a>
+                </li>
+                <li><a href="https://www.universalis.fr/encyclopedie/traitement-automatique-des-langues/"> En savoir
+                        plus sur le traitement automatique des langues</a></li>
+                <li><a href="https://www.ibm.com/fr-fr/topics/computer-vision">En savoir plus sur le computer-vision</a>
+                </li>
+            </ul>
+        </aside>
+
+        <footer>
+            <div class="contenu">
+                <h3>A propos</h3>
+                <p>Ce site a été réalisé dans le cadre du cours de technologie WEB client de licence informatique de
+                    l'UCA. Le but étant d'utiliser les langages de programmation HTML,
+                    CSS et JavaScript, nous n'avons pas écrit nous même les différents articles qui composent le site.
+                    Le contenu des articles est donc une copie de sites déjà existants tel que wikipedia ou les sites
+                    qui sont référencés dans les liens utiles de cette page. </p>
+
+                <h3>Nous contacter</h3>
+                <h4>Mail étudiant:</h4>
+                <p>Yoan.BOYER@etu.uca.fr <br>
+                    Alexandre.CHASSEFEYRE@etu.uca.fr</p>
+            </div>
+        </footer>
+    </div>
+    <script src="../js/menu.js"></script>
+</body>
+
+</html>

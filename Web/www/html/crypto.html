@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Yoan Boyer & Alexandre Chassefeyre">
+	<meta name="description" content="page présentant la cryptographie">
+
+	<title>Cryptographie</title>
+	<link href="../css/normalize.css" rel="stylesheet">
+	<link href="../css/index.css" rel="stylesheet">
+	<link href="../css/table.css" rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		<nav id="menu" class="topnav">
+			<div id="menu-burger"><img src="images/burger.png" alt="Menu burger"></div>
+			<a id="logo" href="../index.html"><img src="images/logo.png" alt="Logo du site"></a>
+			<a id="login" href="formulaire.html"><img src="images/whiteLogin.png" alt="Bouton de connexion"
+					title="Connexion"></a>
+			<ul>
+				<li><a href="../index.html">Page d'accueil</a></li>
+				<li><a href="ia.html">Intelligence artificielle</a></li>
+				<li><a href="vr.html">Réalité virtuelle</a></li>
+				<li><a class="active" href="crypto.html">Cryptographie</a></li>
+			</ul>
+		</nav>
+
+		<div class="container_image">
+			<img id="illustration" src="images/crypto.jpg" alt="Image d'illustration de la crypto">
+			<div class="text black">
+				<h1>Cryptographie</h1>
+			</div>
+		</div>
+	</header>
+
+	<div class="container">
+		<nav id="toc">
+			<ul>
+				<li><a href="#Intro">Introduction</a>
+					<ul>
+						<li><a href="#signature">Signature électronique</a></li>
+						<li><a href="#certificat">Certificat numérique</a></li>
+						<li><a href="#enregistrement">Autorité d'enregistrement</a></li>
+						<li><a href="#autorite">Autorité de certification</a></li>
+					</ul>
+				</li>
+				<li><a href="#blockchain">Blockchain</a>
+					<ul>
+						<li><a href="#def">Definition</a></li>
+						<li><a href="#fonc">Fonctionnement</a></li>
+					</ul>
+				</li>
+				<li><a href="#Cryptomonnaie">Cryptomonnaie</a>
+					<ul>
+						<li><a href="#Bitcoin">Bitcoin</a></li>
+						<li><a href="#eth">Ethereum</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+
+		<article>
+			<header>
+				<h2>Les utilisations de la cryptographie</h2>
+			</header>
+
+			<section>
+				<h3 id="Intro">Introduction</h3>
+
+				<p>La cryptographie symétrique consiste à ce que plusieurs personnes utilisent la même clé pour crypter
+					et décrypter desmessages. Le principal inconvénient de ce
+					système est l'échange d'une clé unique entre différentes personnes : comment cette clé unique
+					peut-elle être envoyée, permettant à chaque personne d'être cryptée et
+					décryptée en toute sécurité ? Dans le cas d'un chiffrement asymétrique, chaque utilisateur dispose
+					de deux clés : </p>
+				<ul>
+					<li>La clé privée, qui doit être gardée secrète.</li>
+
+					<li>La clé publique, qui est à la disposition de tous les autres utilisateurs.</li>
+
+					<li>Ces deux clés sont mathématiquement liées.</li>
+				</ul>
+
+				<p>En pratique, la clé publique est utilisée pour chiffrer les messages et la clé privée pour les
+					déchiffrer. Une fois qu'un message est crypté, seul le destinataire
+					peut le décrypter. Authentifier les correspondants : Un aspect à ne pas négliger lorsqu'une personne
+					veut effectuer des transactions sécurisées est
+					l'authentification des deux correspondants : la personne à qui j'envoie un message chiffré est-elle
+					vraiment celle à laquelle je pense ? La personne qui m'envoie
+					un message chiffré est-elle la personne à laquelle je pense ? Le principe d'authentification est mis
+					en œuvre par le biais d'un "prouveur" (la personne qui se
+					prétend, qui s'identifie) et d'un "vérifieur" (fournisseur de services) : le vérifieur envoie un
+					défi au prouveur, qui doit faire ce dernier. Cela suppose que les
+					prouveur et vérifieur se sont déjà mis d'accord sur le partage d'un secret. Quatre conditions sont
+					nécessaires pour l'application du principe d'authentification :</p>
+
+				<h4 id="signature">Une signature électronique</h4>
+
+				<p>Il s'agit d'un code électronique unique qui vous permet de signer un message chiffré. Cette signature
+					permet d'identifier l'origine du message : elle a la même
+					fonction qu'une signature "manuelle". C'est la clé privée avec laquelle vous pouvez signer, et la
+					clé publique avec laquelle vous pouvez vérifier la signature.</p>
+
+				<h4 id="certificat">Un certificat numérique</h4>
+
+				<p>Il s'agit d'un document électronique qui identifie la clé d'une entité juridique (personne, société,
+					ordinateur...). Cette correspondance est confirmée par un centre
+					de certification (CA). Ces certificats sont utilisés pour identifier l'organisation. Ce certificat
+					est normalisé (norme X.509v3). En particulier, les données de
+					l'utilisateur (l'identité du propriétaire de la clé, la clé publique et l'utilisation de la clé)
+					sont signées par l'organisme de certification lui-même, y compris
+					certaines de ses propres données (période de validité du certificat, algorithme de cryptage utilisé,
+					numéro de série, etc.)</p>
+
+				<h4 id="enregistrement">Autorité d'enregistrement</h4>
+
+				<p>C'est l'autorité qui génère les demandes de certification de l'utilisateur. L'enregistrement de cet
+					utilisateur n'est confirmé qu'après vérification des informations
+					le concernant. La demande est ensuite transmise à l'autorité de certification.</p>
+
+				<h4 id="autorite">Autorité de certification</h4>
+
+				<p>Il s'agit d'une organisation qui génère des certificats pour différents utilisateurs. C'est une étape
+					nécessaire à la mise en place d'un système sécurisé (commerce
+					électronique...).
+
+					Les avantages de la cryptographie en termes de sécurité informatique des entreprises
+					Tant que la clé privée d'une personne n'est pas compromise,
+					le chiffrement des données et des messages offre des
+					avantages tels que l'intégrité et la
+					confidentialité. Lorsqu'un message ou un document est
+					décrypté, son contenu est vérifié par rapport au message,
+					comme c'était le cas avec le processus de cryptage. La
+					moindre modification du contenu original entraîne l'échec du
+					processus de décryptage. En ce qui concerne la
+					confidentialité, la clé publique est utilisée pour crypter
+					le message ou le document et la clé privée est utilisée pour
+					décrypter le message ou le document. Cela permet de garantir
+					que seul un destinataire sélectionné peut décrypter et lire
+					le contenu.</p>
+			</section>
+
+			<section>
+				<h3 id="blockchain">La blockchain</h3>
+				<h4 id="def">Definition</h4>
+				<p>Une blockchain, ou chaîne de blocs1,2, est une technologie de stockage et de transmission
+					d'informations sans autorité centrale. Techniquement, il s'agit d'une base de données distribuée
+					dont les informations envoyées par les utilisateurs et les liens internes à la base sont vérifiés et
+					groupés à intervalles de temps réguliers en blocs, formant ainsi une chaîne3. L'ensemble est
+					sécurisé par cryptographie. Par extension, une chaîne de blocs est une base de données distribuée
+					qui gère une liste d'enregistrements protégés contre la falsification ou la modification par les
+					nœuds de stockage ; c'est donc un registre distribué et sécurisé de toutes les transactions
+					effectuées depuis le démarrage du système réparti4.
+
+					Il existe une analogie avec le réseau Internet, car dans les
+					deux cas les technologies emploient des protocoles informatiques
+					liés à une infrastructure décentralisée. Internet permet de
+					transférer des paquets de données d'un serveur « sûr » à des
+					clients distants (charge aux destinataires de vérifier
+					l'intégrité des données transmises), alors qu'une blockchain
+					permet à la « confiance » de s'établir entre des agents
+					distincts du système5. Avec la technologie blockchain, le «
+					tiers de confiance » devient le système lui-même : chaque
+					élément réparti de la blockchain contient les éléments
+					nécessaires pour garantir l'intégrité des données échangées (par
+					un algorithme cryptographique).</p>
+
+				<h4 id="fonc">Fonctionnement</h4>
+				<h5>Preuve de travail</h5>
+				<p>La chaîne de blocs est une forme de mise en œuvre de la solution du « problème des généraux byzantins
+					». Ce problème mathématique consiste à s'assurer qu’un ensemble de composants informatiques
+					fonctionnant de concert sache gérer des défaillances (ou malveillances) et arrive à produire un
+					consensus. Le système doit pouvoir maintenir sa fiabilité dans le cas où une part des participants
+					enverrait des informations erronées ou malveillantes, comme dans le cas d'une cryptomonnaie, pour
+					contourner la vérification de la double dépense par les mineurs du réseau (la double dépense
+					consiste à réaliser deux paiements simultanément : un vers soi-même et un autre vers une victime ;
+					l'objectif est de voir le paiement vers la victime inscrit dans la chaîne de blocs suffisamment
+					longtemps pour tromper la victime mais inscrit de sorte qu'il finisse par être entièrement remplacé
+					par le paiement vers soi-même).
+
+					La méthode historique pour aboutir à ce type de consensus est « la preuve de travail » (proof of
+					work). Cette méthode utilise un problème mathématique dont la solution permet de vérifier que le «
+					mineur » a bien réalisé un travail. Le protocole utilise un système cryptographique fondé sur un
+					système décentralisé de preuves : la résolution de la preuve nécessite une puissance de calcul
+					informatique élevée, fournie par les mineurs. Les mineurs sont des entités dont le rôle est
+					d’alimenter le réseau en puissance de calcul, pour permettre la mise à jour de la base de données
+					décentralisée. Pour cette mise à jour, les mineurs doivent confirmer les nouveaux blocs en validant
+					les données. Dans le cas du bitcoin et dans le cas d'ajout de blocs à la chaîne, il faut résoudre un
+					problème de cryptographie par force brute pour pouvoir ajouter un nouveau bloc. Selon la «
+					difficulté » de la chaîne au moment de la résolution, celle-ci peut nécessiter de répéter plusieurs
+					centaines de milliards de fois la même opération. Dans le cas du bitcoin, un mineur est uniquement
+					rémunéré pour son travail fourni s'il a été le premier à résoudre le problème cryptographique.
+
+					Une concurrence existe entre les mineurs pour l'ajout de nouveaux blocs, mais aussi une certaine
+					solidarité. N’importe qui peut prêter sa puissance de calcul pour miner, mais plus les mineurs sont
+					nombreux plus la « difficulté » est élevée et plus la résolution du problème cryptographique est
+					difficile. Réciproquement, si des mineurs arrêtent de miner, la difficulté diminue. Le protocole
+					peut devenir quasi-inviolable dès lors qu’aucun groupement de mineurs ne devient majoritaire5
+					(empêchant ainsi l'attaque des 51 %).
+
+					Parmi les écueils associés à cette méthode figurent : le temps
+					de latence nécessaire pour valider une transaction et le gain
+					décroissant des mineurs. La consommation importante d'énergie
+					liée à cette méthode est aussi pointée118. Face à ces constats,
+					la communauté « blockchain » débat de l’utilisation de méthodes
+					de consensus qui ne seraient plus la preuve de travail mais par
+					exemple la preuve de participation.</p>
+				<h5>Transactions</h5>
+				<p>Dans l'univers des blockchains, on appelle « transaction » toute opération consistant à modifier
+					l'état de la blockchain, et donc à ajouter de nouvelles données qu'elle stockera de façon
+					irréversible. Il peut s'agir :
+
+					d'échanges entre les utilisateurs (un utilisateur A envoie x jetons à un utilisateur B) ;
+					d'exécutions d'opérations par un smart contract (ex : exécution d'un smart contract sur la
+					blockchain Ethereum), sur demande d'un utilisateur ou d'un autre smart contract.
+					Originellement, avec le réseau Bitcoin, les transactions
+					n'étaient que du premier type puisqu'il était seulement possible
+					d'envoyer une quantité de jetons « bitcoins » à une autre
+					adresse. Le terme « transaction » a donc maintenant une
+					acception beaucoup plus large et se rapproche davantage du
+					concept de transaction informatique, qui consiste à interagir
+					avec une base de données (pour écrire, modifier ou lire des
+					données).</p>
+
+				<figure>
+					<img src="images/blockchain.jpg" alt="illustration de la blockchain">
+					<figcaption>Représentation de la blockchain en dessin</figcaption>
+				</figure>
+			</section>
+
+			<section>
+				<h3 id="Cryptomonnaie">Cryptomonnaie</h3>
+				<h4 id="Bitcoin">Bitcoin</h4>
+				<h5>Principe</h5>
+				<p>Le Bitcoin (₿, BTC, XBTn 1) (de l'anglais bit : unité d'information binaire et coin « pièce de
+					monnaie ») est une cryptomonnaie autrement appelée monnaie cryptographique. Dans le cas de la
+					dénomination unitaire, on l'écrit « bitcoin » et, dans le cas du système de paiement pair-à-pair on
+					l'écrit « Bitcoin ». L'idée fut présentée pour la première fois en novembre 2008 par une personne,
+					ou un groupe de personnes, sous le pseudonyme de Satoshi Nakamoto1,2. Le code source de
+					l'implémentation de référence fut quant à lui publié en 2009. L'objectif est de créer un système
+					décentralisé et pair-à-pair afin d'échanger de la valeur monétaire en s'affranchissant de tout
+					organisme tiers, tel que les institutions financières3.
+
+					Le G20 considère que le Bitcoin est un « crypto-actif »4. Ce
+					terme « crypto-actif » désigne « des actifs virtuels stockés sur
+					un support électronique permettant à une communauté
+					d'utilisateurs les acceptant en paiement de réaliser des
+					transactions sans avoir à recourir à la monnaie légale »5.</p>
+				<h5>Fonctionnement</h5>
+				<p>Pour créer et gérer les bitcoins, Bitcoin s'appuie sur un logiciel. Dans ce logiciel, les bitcoins
+					sont créés conformément à un protocole qui rétribue les agents (appelés « mineurs ») qui ont traité
+					des transactions. Ces agents mettent à contribution leur puissance de calcul informatique afin de
+					vérifier, de sécuriser et d'inscrire les transactions dans un registre virtueln 2, appelé la
+					blockchain, en français chaîne de blocs, nom qui vient du fait que l'entité de base de Bitcoin
+					s'appelle un bloc, et que les blocs sont ensuite reliés en une chaîne, la chaine de blocs.
+
+					Pour chaque nouveau bloc accepté, l'activité de vérification-sécurisation-enregistrement, appelée
+					minage, est rémunérée par des bitcoins nouvellement créés et par les frais des transactions
+					traitées6. En tant que monnaie ou commodité, les bitcoins peuvent être échangés contre d'autres
+					monnaies ou commodités, biens ou services. Le taux d'échange de la cryptomonnaie est fixé sur des
+					places de marché spécialisées et fluctue selon la loi de l'offre et de la demande.
+
+					Il est possible d'acheter des bitcoins en ligne sur des plateformes spécialisées, des bornes
+					physiques ou en échange de n'importe quel bien ou service avec une personne en possédant déjà (la
+					transaction peut se faire de smartphone à smartphone). Les plateformes permettent également de
+					suivre en temps réel l'évolution du prix du bitcoin par rapport à d'autres monnaies ou
+					cryptomonnaies.</p>
+				<h4 id="eth">Ethereum</h4>
+				<h5>Definition</h5>
+				<p>Ethereum (prononcé ɪˈθɪrɪəm/1 ) est un protocole d'échanges décentralisés permettant la création par
+					les utilisateurs de contrats intelligents. Ces contrats intelligents sont basés sur un protocole
+					informatique permettant de vérifier ou de mettre en application un contrat mutuel. Ils sont déployés
+					et consultables publiquement dans une blockchain.
+
+					Ethereum utilise une unité de compte dénommée Ether comme moyen de paiement de ces contrats. Son
+					sigle correspondant, utilisé par les plateformes d'échanges, est « ETH ». Ethereum est la deuxième
+					plus importante monnaie cryptographique décentralisée avec une capitalisation supérieure à 448
+					milliards d'euros en octobre 20212.
+
+					En juillet 2016, l'équipe de développement d'Ethereum a dû procéder à un hard fork après une attaque
+					réussie par un groupe de pirates sur un fonds d'investissement en Ether appelé The DAO (en)
+					(organisation autonome décentralisée) dans laquelle près de 3 641 694 ETH (soit plus de 5 % du
+					montant total de la crypto-monnaie en circulation) ont été détournés sur une adresse non contrôlée
+					par les membres de The DAO3. Ce hard fork a permis d'annuler le détournement et de restituer ses
+					fonds à l'organisation autonome décentralisée. Néanmoins, ce changement n'a pas recueilli un
+					consensus absolu et une faible partie de la communauté n'a pas implémenté ce changement qui a
+					conduit à la formation de deux chaînes de blocs séparées : l'une officielle avec pour unité
+					monétaire l'Ether (symbole : ETH) et son spin-off avec pour unité monétaire l'Ether classique (en)
+					(symbole : ETC)4.
+
+					Comme d'autres crypto-monnaies basées sur la technologie de la
+					Blockchain, Ethereum a été critiqué pour son empreinte carbone
+					très élevée5,6. Afin de réduire considérablement son empreinte
+					carbone, le 15 septembre 2022, Ethereum a accompli la transition
+					de son mécanisme de validation d'une preuve de travail vers une
+					preuve d'enjeu, dans une mise à jour majeure connue sous le nom
+					de "The Merge" / "La Fusion"7,8,9; la consommation énergétique
+					d'Ethereum a alors chuté d'environ 99,95%7.</p>
+				<h5>Origine</h5>
+				<p>Le programmeur Vitalik Buterin découvre les cryptomonnaies avec le Bitcoin en 2011 et décide de créer
+					un nouveau protocole utilisant un langage Turing-Complet plutôt que d'alourdir la structure du
+					Bitcoin, l'idée d'Ethereum naissait10. En décembre 2013, Vitalik Buterin publie une description de
+					son projet Ethereum sous la forme d'un livre blanc dans le but de lancer des applications
+					décentralisées11,12. Début 2014, il met en prévente les premiers Ethers pour financer le
+					développement du projet. La vente lui permet de rassembler 31 591 bitcoins d'une valeur de plus de
+					18 millions de dollars à l'époque, pour 60 millions d'Ethers vendus. La chaîne de blocs Ethereum a
+					été lancée le 30 juillet 201513, mais à l'origine Buterin ne cherchait pas à créer une
+					crypto-monnaie.
+
+					La première version du logiciel, appelée Frontier, a été développée par la société suisse Ethereum
+					Switzerland GmbH (EthSuisse)14, alors dirigée par Joseph Lubin. Une autre société suisse, The
+					Ethereum Foundation, à but non lucratif, a aussi été créée pour promouvoir le développement de cette
+					nouvelle monnaie.
+
+					En mars 2016, la nouvelle version du logiciel prend le nom de Homestead.
+
+					Les prochaines versions Metropolis suivie de Serenity sont
+					en cours de développement[Quand ?].</p>
+				<table>
+					<caption>Unité de mesure</caption>
+					<thead>
+						<tr>
+							<th>Multiples</th>
+							<th>Equivalent</th>
+							<th>Fraction</th>
+							<th>Equivalent</th>
+							<th>Origine du nom</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Mille (10<sup>3</sup>)</td>
+							<td>1 kEther</td>
+							<td>1 millième (10<sup>-3</sup>)</td>
+							<td>1 Finney</td>
+							<td>Du nom du développeur <a href="https://fr.wikipedia.org/wiki/Hal_Finney"> Hal
+									Finney</a>,
+								premier utilisateur du <a href="#Bitcoin">
+									Bitcoin</a>, après <a href="https://fr.wikipedia.org/wiki/Satoshi_Nakamoto"> Satoshi
+									Nakamoto</a></td>
+						</tr>
+						<tr>
+							<td>1 million (10<sup>6</sup>)</td>
+							<td>1 MEther</td>
+							<td>1 millionième (10<sup>-6</sup>)</td>
+							<td>1 Szabo</td>
+							<td>Du nom du cryptographe et informaticien <a
+									href="https://fr.wikipedia.org/wiki/Nick_Szabo"> Nick Szabo</a>,
+								qui a inventé les contrats intelligents (Smart
+								contracts).</td>
+						</tr>
+						<tr>
+							<td colspan=2 rowspan=4>les unités au-dessus du
+								million n'ont pas de sens
+								dans la mesure où la
+								quantité de monnaie
+								n'existe pas.</td>
+							<td>1 milliardième (10<sup>-9</sup>)</td>
+							<td>1 Gwei</td>
+							<td rowspan=4>Du nom du cryptographe et cypherpunk <a
+									href="https://academy.bit2me.com/fr/quien-es-wei-dai/"> Wei Dai</a>,
+								inventeur de b-money, dont le concept a été référencé
+								dans la 2e section du texte de Satoshi Nakamoto.</td>
+						</tr>
+						<tr>
+							<td>1 billionème (10<sup>-12</sup>)</td>
+							<td>1 Mwei</td>
+						</tr>
+						<tr>
+							<td>1 billiardième (10<sup>-15</sup>)</td>
+							<td>1 kwei</td>
+						</tr>
+						<tr>
+							<td>1 trillionième (10<sup>-18</sup>)</td>
+							<td>1 wei</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+		</article>
+
+		<aside>
+			<h3>Liens utiles</h3>
+			<ul>
+				<li><a href="https://www.ibm.com/fr-fr/topics/what-is-blockchain">En
+						savoir plus sur la blockchain</a></li>
+				<li><a href="https://www.oracle.com/fr/security/qu-est-ce-que-la-cryptographie.html">En savoir plus sur
+						la cryptographie</a></li>
+				<li><a href="https://bitcoin.org/fr/"> Bitcoin</a></li>
+				<li><a href="https://ethereum.org/fr/">Ethereum</a></li>
+			</ul>
+		</aside>
+
+		<footer>
+			<div class="contenu">
+				<h3>A propos</h3>
+				<p>Ce site a été réalisé dans le cadre du cours de technologie WEB client de licence informatique de
+					l'UCA. Le but étant d'utiliser les langages de programmation HTML,
+					CSS et JavaScript, nous n'avons pas écrit nous même les différents articles qui composent le site.
+					Le contenu des articles est donc une copie de sites déjà existants tel que wikipedia ou les sites
+					qui sont référencés dans les liens utiles de cette page. </p>
+
+				<h3>Nous contacter</h3>
+				<h4>Mail étudiant:</h4>
+				<p>Yoan.BOYER@etu.uca.fr <br>
+					Alexandre.CHASSEFEYRE@etu.uca.fr</p>
+			</div>
+		</footer>
+	</div>
+	<script src="../js/menu.js"></script>
+</body>
+</html>

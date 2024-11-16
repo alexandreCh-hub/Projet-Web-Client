@@ -1,0 +1,165 @@
+@import url(menu.css);
+@import url(image.css);
+@import url(toc.css);
+@import url(aside.css);
+
+/* CSS pour le contenu principale
+   @import pour tous les autres éléments */
+
+/* images dans les articles */
+figure {
+    border: thin #c0c0c0 solid;
+    display: flex;
+    flex-flow: column;
+    padding: 5px;
+    max-width: 880px;
+    margin: auto;
+}
+
+figure img {
+    /*max-width: 880px;
+    max-height: 600px;*/
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption {
+    background-color: #222;
+    color: #fff;
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+}
+
+/* CSS pour la mise en forme des différents éléments */
+
+h1 {
+    font-family: Lato;
+}
+
+article {
+    line-height: 2em;
+    font-family: optima;
+    overflow-wrap: break-word;
+}
+
+article p {
+    text-indent: 2%;
+}
+
+article h2 {
+    font-size: 3em;
+    line-height: 1em;
+}
+
+article h3 {
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+article h4 {
+    font-size: 1.5em;
+}
+
+article h5 {
+    font-size: 1.3em;
+    color: #696161;
+}
+
+article h3,
+article h4,
+article h5 {
+    font-family: Lato;
+}
+
+strong {
+    font-weight: normal;
+}
+
+/* Placement des éléments */
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#toc {
+    flex-basis: 16%;
+}
+
+article {
+    flex-basis: 60%;
+    /*max-width: 1000px;*/
+}
+
+aside {
+    flex-basis: 16%;
+}
+
+/* CSS pour le footer */
+
+footer {
+    flex-basis: 100%;
+    background-color: #222;
+    color: #fff;
+    margin-top: 2%;
+    overflow-wrap: break-word;
+}
+
+.contenu {
+    margin: 3% 20%;
+}
+
+footer h4,
+footer p {
+    color: #696161;
+}
+
+@media screen and (max-width:1024px) {
+    #toc {
+        flex-basis: 20%;
+    }
+
+    article {
+        flex-basis: 70%;
+    }
+
+    article h2 {
+        font-size: 2em;
+    }
+
+    article h3 {
+        font-size: 1.5em;
+    }
+
+    aside {
+        position: relative;
+        flex-basis: 50%;
+        margin-left: 45%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    article {
+        /*max-width: 300px;*/
+        margin: 0 10px;
+        font-size: 0.8em;
+        flex-basis: 90%;
+    }
+
+    #toc {
+        flex-basis: 50%;
+        position: relative;
+    }
+
+    #toc,
+    aside,
+    footer {
+        font-size: 0.8em;
+    }
+
+    aside {
+        flex-basis: 60%;
+        margin-left: 5%;
+    }
+}
